@@ -1,0 +1,97 @@
+<!Doctype html>
+<html>
+<head>
+    <style>
+        .hh{
+            height:680px;
+            width:70%;
+            border:3px outset black;
+           
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+    <title>HTML FORMS</title>
+</head>
+
+<body background =https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000>
+
+<form name="f1" onsubmit="fun()">
+<div class="hh">
+<fieldset>
+   
+
+    FirstName: <input type="text" placeholder="Enter your first name" required id="fname" name="fname" pattern=[a-zA-Z]{3,} AUTOFOCUS><br><br>
+    LastName: <input type="text"  placeholder="Enter your last name"required id="lname" name="lname" pattern=[a-zA-Z]{3,}><br><br>
+    Roll Number: <input type="text" placeholder="Enter your Roll Number" required id="rollnum" name="rollnum" pattern=[A-Z0-9]{3,} AUTOFOCUS><br><br>
+    Phone number:<input type="text" placeholder="Enter your phone number" name ="ph" pattern=[0-9]{10} ><br><br>
+    Date Of Birth: <input type="date" placeholder="Enter your date of birth" required><br><br>
+    Age: <input type="Number" placeholder="Enter your age" name="age" maxlength="3" required><br><br>
+   
+   
+   
+    <legend><h3 style="color:red" >REGESTERATION</h3></legend>
+    Gender:<br>
+    <input type="radio" id="m" name="m" value="Male"><label>Male</label><br>
+        <input type="radio" id="f" name="f" value="Female"><label>Female</label><br<br>
+   
+    <br><br>
+   
+   
+    <label>City:</label>
+    <select name="City">
+    <option value="Salem">     </option>
+    <option value="Salem">Salem</option>
+    <option value="Madurai">Madurai</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Coimbatore">Coimbatore</option>
+    <option value="Erode">Erode</option>
+    <option value="Tripur">Tripur</option>
+  </select>
+  <br><br>
+   
+   <legend>Address:</legend>
+    <textarea name="Address" rows="3" cols="38" placeholder="Enter your address" name="address" required></textarea><br><br>
+   
+   
+ Email id: <input type="text"  placeholder="Enter your email-address" required  id="email" name="email"><br><br>
+<label for="password">Password:</label>
+<input type="password"  placeholder="Enter your Password" id="password" name="password"><br><br>
+<label for="confirm_password">Confirm Password:</label>
+<input type="password" placeholder="Enter your Confirm Password" id="confirm_password" name="confirm_password">
+</fieldset><br>
+<br><br>
+</div><br><br>
+<marquee behavior="scroll" direction="left">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4M9ivjYIFvfc8ZdvJRB9yfO5rLd9DuS4I1g&usqp=CAU" width="150px" height="100px">
+    <img src="https://www.vcloudpoint.com/wp-content/uploads/vCloudPoint-Smart-Classroom.jpg" alt="" width="150px" height="100px">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeivCQaBQaSgpDvc0RBCI8PIFtjUO1ISvUpw&usqp=CAU" alt="" width="150px" height="100px">
+   
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQcM6dnwLRTDbkm2J56id_Krljpw8KVyCI-g&usqp=CAU" alt="" width="150px" height="100px">
+   </marquee>
+<center><input type="checkbox" id="dec" name="dec">I Hereby Declare that the above given statements are true<br>
+<br><br><input type="button" value="Submit" onclick="fun()"></center>
+
+</form>
+<script>
+    function fun() {
+    var fname = document.forms[0]["fname"].value;
+    var lname = document.forms[0]["lname"].value;
+    var rollnum = document.forms[0]["rollnum"].value;
+    var email = document.forms[0]["email"].value;
+    var password = document.forms[0]["password"].value;
+    var confirm_password = document.forms[0]["confirm_password"].value;
+    var agee=document.forms[0]["age"].value;
+    //var addr=document.forms[0]["address"].value;
+    //var gen1=document.forms[0]["m"].value;
+    //var gen2=document.forms[0]["f"].value;
+    var phn=document.forms[0]["ph"].value;
+    var gm=document.f1.m.value;
+   var gf=document.f1.f.value;
+   var d=document.f1.dec.value;
+   //var checkbox = document.getElementById("dec").checked;
+   
+    if (fname == "") {
+    alert("First Name must be filled out");
+    return false;
